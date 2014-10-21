@@ -1,0 +1,66 @@
+package pagerank;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.hadoop.conf.Configuration;
+
+/*
+ * VERY IMPORTANT 
+ * 
+ * Each time you need to read/write a file, retrieve the directory path with conf.get 
+ * The paths will change during the release tests, so be very carefully, never write the actual path "data/..." 
+ * CORECT:
+ * String initialVector = conf.get("initialRankVectorPath");
+ * BufferedWriter output = new BufferedWriter(new FileWriter(initialVector + "/vector.txt"));
+ * 
+ * NOT CORRECT
+ * BufferedWriter output = new BufferedWriter(new FileWriter(data/initialVector/vector.txt"));
+ */
+
+public class PageRank {
+	
+	public static void createInitialRankVector(String directory, long n) 
+	{
+		//TO DO			
+	}
+	
+	public static boolean checkConvergence(String initialDir, String iterationDir, double epsilon)
+	{
+		//TO DO
+		return false;
+	}
+	
+	public static void avoidSpiderTraps(String vectorDir, long nNodes, double beta) 
+	{
+		//TO DO
+		
+	}
+	
+	public static void iterativePageRank(Configuration conf) 
+			throws IOException, InterruptedException, ClassNotFoundException
+	{
+		
+		
+		String initialVector = conf.get("initialRankVectorPath");
+		String currentVector = conf.get("currentRankVectorPath");
+		
+		String finalVector = conf.get("finalRankVectorPath"); 
+		/*here the testing system will seach for the final rank vector*/
+		
+		Double epsilon = conf.getDouble("epsilon", 0.1);
+		Double beta = conf.getDouble("beta", 0.8);
+
+
+		//TO DO
+
+
+		// when you finished implementing delete this line
+		throw new UnsupportedOperationException("Implementation missing");
+		
+	}
+}
