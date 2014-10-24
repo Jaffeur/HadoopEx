@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 '''
 INF-230 Tutorial on Clustering
 Mario Sozio, Oana Balalau, Luis Galarraga
